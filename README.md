@@ -1,17 +1,22 @@
 # Twitch Clip Organizer
 
-This Google Apps Script automates various tasks related to managing Twitch clips in a Google Sheets spreadsheet. It provides functionalities such as populating game categories, finding potential duplicate clips, filtering clips based on channels, identifying non-Twitch clips, and automated spreadsheet formatting.
+This Google Apps Script automates various tasks related to managing Twitch clips in a Google Sheets spreadsheet. It provides functionalities such as populating Twitch categories, identifying potential duplicate clips, filtering clips based on channels, identifying non-Twitch clips, and automated spreadsheet formatting.
 
-Demo Video:
+## Table of Contents
 
-https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer/assets/11856062/7f753e7e-4b3f-40ca-a91a-618a71498ba9
-
-
+* [Features](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#features)
+* [Prerequisites](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#prerequisites)
+* [Setup](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#setup)
+* [Usage](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#usage)
+* [Customization](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#customization)
+* [Contributing](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#contributing)
+* [License](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#contributing)
+* [Demo Video](https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer?tab=readme-ov-file#demo-video)
 
 ## Features
 
 - Populate Twitch Categories: Automatically retrieves and populates the categories for Twitch clips in the sheet.
-- Find Potential Duplicates: Identifies potential duplicate Twitch clips based on video ID and VOD offset.
+- Identify Potential Duplicates: Identifies and flags potential duplicate Twitch clips based on video ID and VOD offset.
 - Filter Channels: Identifies and flags clips from specific Twitch channels.
 - Identify Non-Twitch Clips: Detects and flags clips that are not from Twitch.
 - Fix Formatting: Applies consistent formatting to the sheet, including cell alignment, number formatting, and font styles.
@@ -53,3 +58,8 @@ Contributions to this project are welcome. If you find any issues or have sugges
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
+## Demo Video:
+
+https://github.com/AnthonyRodriguez726/Twitch-Clip-Organizer/assets/11856062/7f753e7e-4b3f-40ca-a91a-618a71498ba9
