@@ -4,7 +4,7 @@
 function populateCategories() {
   var sheet = SpreadsheetApp.getActiveSheet();
   var clipUrlColumn = 3;
-  var gameNameColumn = 4;
+  var gameNameColumn = 5;
   
   var lastRow = sheet.getLastRow();
   var clipUrls = sheet.getRange(2, clipUrlColumn, lastRow - 1).getValues();
@@ -17,6 +17,7 @@ function populateCategories() {
     if (clipUrl !== "" && gameName === "") {
       var clipId = extractClipId(clipUrl);
       var clipData = getClipData(clipId);
+      console.log("populateCategories clipData:" + clipData);
       
       if (clipData) {
         var gameName = getGameName(clipData.game_id);
@@ -40,7 +41,7 @@ function findDuplicates() {
   var data = sheet.getDataRange().getValues();
   var headers = data[0];
   var clipUrlIndex = headers.indexOf("Clip URL");
-  var duplicateColumnIndex = 4; // Index of Column E (5th column)
+  var duplicateColumnIndex = 5; // Index of Column E (6th column)
 
   var vodGroups = {};
 
@@ -117,7 +118,7 @@ function findDuplicates() {
 function identifyNonTwitchClips() {
   var sheet = SpreadsheetApp.getActiveSheet();
   var clipUrlColumn = 3;
-  var duplicateColumn = 5;
+  var duplicateColumn = 6;
   
   var lastRow = sheet.getLastRow();
   var clipUrls = sheet.getRange(2, clipUrlColumn, lastRow - 1).getValues();
@@ -145,7 +146,7 @@ function checkClipChannel() {
   var data = sheet.getDataRange().getValues();
   var headers = data[0];
   var clipUrlIndex = headers.indexOf("Clip URL");
-  var channelColumnIndex = 4; // Index of Column E (5th column)
+  var channelColumnIndex = 5; // Index of Column E (5th column)
 
   for (var i = 1; i < data.length; i++) {
     var clipUrl = data[i][clipUrlIndex];

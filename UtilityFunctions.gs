@@ -16,7 +16,7 @@ function getGameName(gameId) {
       "Client-Id": clientId
     }
   };
-  
+  console.log("getGameName url " + url);
   try {
     var response = UrlFetchApp.fetch(url, options);
     var result = response.getContentText();
@@ -51,7 +51,7 @@ function getClipData(clipId) {
       "Client-Id": clientId
     }
   };
-
+  console.log("getClipData url: " + url);
   try {
     var response = UrlFetchApp.fetch(url, options);
     var result = response.getContentText();
@@ -70,6 +70,7 @@ function getClipData(clipId) {
       return "No clip data found for clip ID: " + clipId;
     }
   } catch (error) {
+    console.log(error);
     return "Error retrieving clip data";
   }
 }
@@ -94,6 +95,7 @@ function isTwitchUrl(url) {
 function extractClipId(clipUrl) {
   var regex = /(?:clips\.twitch\.tv\/|twitch\.tv\/\w+\/clip\/)([^\s?&#]+)/;
   var match = clipUrl.match(regex);
+  console.log("extractClipId:" + match);
   return match ? match[1] : null;
 }
 

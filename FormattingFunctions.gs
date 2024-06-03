@@ -13,8 +13,8 @@ function fixFormatting() {
     .setFontFamily("Arial")
     .setFontSize(11);
 
-  // Format Column B (Twitch Username) and Column D (Twitch Category)
-  sheet.getRange(2, 2, lastRow - 1, 3)
+  // Format Column B (Twitch Username), Column D (Payment Info), and Column E (Twitch Category)
+  sheet.getRange(2, 2, lastRow - 1, 4)
     .setHorizontalAlignment("left")
     .setFontFamily("Arial")
     .setFontSize(11);
@@ -23,8 +23,8 @@ function fixFormatting() {
   sheet.getRange(2, 3, lastRow - 1)
     .setWrap(false);
 
-  // Format Column E (Automated Checks)
-  sheet.getRange(2, 5, lastRow - 1)
+  // Format Column F (Automated Checks)
+  sheet.getRange(2, 6, lastRow - 1)
     .setHorizontalAlignment("left")
     .setFontFamily("Arial")
     .setFontSize(10);
@@ -45,8 +45,8 @@ function onFormSubmit(e) {
     .setFontFamily("Arial")
     .setFontSize(11);
 
-  // Format Column B (Twitch Username) and Column D (Twitch Category)
-  sheet.getRange(row, 2, 1, 3)
+  // Format Column B (Twitch Username), Column D (Payment Info), and Column E (Twitch Category)
+  sheet.getRange(row, 2, 1, 4)
     .setHorizontalAlignment("left")
     .setFontFamily("Arial")
     .setFontSize(11);
@@ -55,8 +55,8 @@ function onFormSubmit(e) {
   sheet.getRange(row, 3)
     .setWrap(false);
 
-  // Format Column E (Automated Checks)
-  sheet.getRange(row, 5)
+  // Format Column F (Automated Checks)
+  sheet.getRange(row, 6)
     .setHorizontalAlignment("left")
     .setFontFamily("Arial")
     .setFontSize(10);
